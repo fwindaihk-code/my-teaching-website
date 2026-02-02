@@ -3,107 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2025 地理教學空間</title>
-    <!-- 引入 Tailwind CSS 讓網頁變漂亮 -->
+    <title>iGeo 國際地理奧林匹亞備考中心</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        body { background-color: #f8fafc; }
-        .hero-bg { background: linear-gradient(135deg, #0f172a 0%, #1e40af 100%); }
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&display=swap');
+        body { font-family: 'Noto Sans TC', sans-serif; }
+        .topic-card:hover { transform: translateY(-5px); transition: all 0.3s ease; }
     </style>
 </head>
-<body class="font-sans text-gray-900">
+<body class="bg-gray-50">
 
-    <!-- 頂部導覽列 -->
-    <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <!-- 導航欄 -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-2">
-                <span class="text-2xl">🌍</span>
-                <span class="font-bold text-xl tracking-tight text-blue-900">地理教學實驗室</span>
+                <div class="bg-blue-600 text-white p-2 rounded-lg">
+                    <i class="fas fa-globe-americas text-xl"></i>
+                </div>
+                <span class="text-xl font-bold text-gray-800 tracking-tight">iGeo Prep Hub</span>
             </div>
-            <div class="hidden md:flex space-x-8 font-medium">
-                <a href="#" class="text-blue-600">首頁</a>
-                <a href="#" class="text-gray-500 hover:text-blue-600 transition">教學資源</a>
-                <a href="#" class="text-gray-500 hover:text-blue-600 transition">學生專區</a>
+            <div class="hidden md:flex space-x-8 text-gray-600 font-medium">
+                <a href="#" class="hover:text-blue-600">首頁</a>
+                <a href="#topics" class="hover:text-blue-600">考試主題</a>
+                <a href="#" class="hover:text-blue-600">歷屆試題</a>
+                <a href="#" class="hover:text-blue-600">關於 iGeo</a>
             </div>
         </div>
     </nav>
 
-    <!-- 主視覺看板 -->
-    <header class="hero-bg text-white py-24 px-6 text-center">
-        <div class="max-w-4xl mx-auto">
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
-                2025 年度地理教學範例
-            </h1>
-            <p class="text-xl md:text-2xl opacity-80 mb-10 font-light">
-                這是我的第一個 AI 實驗專案，探索數位地理教學的無限可能。
-            </p>
+    <!-- 英雄區 -->
+    <header class="bg-blue-900 text-white py-16 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">iGeo 國際地理奧林匹亞</h1>
+            <p class="text-xl text-blue-100 mb-8">MMT 與 WRT 測試內容涵蓋以下 12 大地理範疇。準備好挑戰世界了嗎？</p>
             <div class="flex justify-center space-x-4">
-                <button class="bg-white text-blue-900 px-8 py-3 rounded-full font-bold hover:bg-blue-50 transition shadow-lg">
-                    開始探索
-                </button>
+                <a href="#topics" class="bg-yellow-500 hover:bg-yellow-400 text-blue-900 px-8 py-3 rounded-full font-bold transition">開始學習</a>
+                <a href="#" class="border border-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-full font-bold transition">下載大綱</a>
             </div>
         </div>
     </header>
 
-    <!-- 核心功能區 -->
-    <main class="max-w-6xl mx-auto px-6 py-20">
-        <div class="grid md:grid-cols-3 gap-10">
-            <!-- 卡片 1 -->
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition duration-300">
-                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-2xl mb-6">🏔️</div>
-                <h3 class="text-xl font-bold mb-3 text-blue-900">地形與氣候</h3>
-                <p class="text-gray-600 leading-relaxed">
-                    收錄全球地形演變、板塊運動以及氣候變遷的互動式教材與教學投影片。
-                </p>
-                <a href="#" class="inline-block mt-6 text-blue-600 font-semibold hover:underline">了解更多 →</a>
+    <!-- 主題網格 -->
+    <main id="topics" class="max-w-6xl mx-auto px-4 py-16">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">核心考試範疇 (Topics)</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- 主題 1 -->
+            <div class="topic-card bg-white p-6 rounded-xl shadow-sm border-l-4 border-blue-500">
+                <div class="text-blue-500 mb-4"><i class="fas fa-cloud-sun-rain text-3xl"></i></div>
+                <h3 class="text-xl font-bold mb-2">Climate and climate change</h3>
+                <p class="text-gray-600">氣候與氣候變遷：研究大氣系統、全球暖化及其地理影響。</p>
             </div>
 
-            <!-- 卡片 2 -->
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition duration-300">
-                <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center text-2xl mb-6">🛰️</div>
-                <h3 class="text-xl font-bold mb-3 text-green-900">GIS 空間分析</h3>
-                <p class="text-gray-600 leading-relaxed">
-                    引導學生使用 Google Earth Pro 與 QGIS 進行社區地圖繪製與空間數據分析。
-                </p>
-                <a href="#" class="inline-block mt-6 text-green-600 font-semibold hover:underline">了解更多 →</a>
+            <!-- 主題 2 -->
+            <div class="topic-card bg-white p-6 rounded-xl shadow-sm border-l-4 border-blue-500">
+                <div class="text-blue-500 mb-4"><i class="fas fa-exclamation-triangle text-3xl"></i></div>
+                <h3 class="text-xl font-bold mb-2">Hazards and hazard management</h3>
+                <p class="text-gray-600">災害與災害管理：自然災害的成因、預警與減災策略。</p>
             </div>
 
-            <!-- 卡片 3 -->
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl transition duration-300">
-                <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center text-2xl mb-6">🤖</div>
-                <h3 class="text-xl font-bold mb-3 text-purple-900">AI 輔助學習</h3>
-                <p class="text-gray-600 leading-relaxed">
-                    利用大型語言模型協助學生整理地理文獻，並生成客製化的考前複習重點。
-                </p>
-                <a href="#" class="inline-block mt-6 text-purple-600 font-semibold hover:underline">了解更多 →</a>
+            <!-- 主題 3 -->
+            <div class="topic-card bg-white p-6 rounded-xl shadow-sm border-l-4 border-green-500">
+                <div class="text-green-500 mb-4"><i class="fas fa-tools text-3xl"></i></div>
+                <h3 class="text-xl font-bold mb-2">Resources and resource management</h3>
+                <p class="text-gray-600">資源與資源管理：能源、水資源及礦產的永續利用。</p>
             </div>
+
+            <!-- 主題 4 -->
+            <div class="topic-card bg-white p-6 rounded-xl shadow-sm border-l-4 border-blue-500">
+                <div class="text-blue-500 mb-4"><i class="fas fa-seedling text-3xl"></i></div>
+                <h3 class="text-xl font-bold mb-2">Environmental geography</h3>
+                <p class="text-gray-600">環境地理與永續發展：人地關係與環境保護政策。</p>
+            </div>
+
+            <!-- 主題 5 -->
+            <div class="topic-card bg-white p-6 rounded-xl shadow-sm border-l-4 border-blue-500">
+                <div class="text-blue-500 mb-4"><i class="fas fa-mountain text-3xl"></i></div>
+                <h3 class="text-xl font-bold mb-2">Landforms and landscapes</h3>
+                <p class="text-gray-600">地形、景觀與土地利用：地貌演化過程與土地規劃。</p>
+            </div>
+
+            <!-- 主題 6 -->
+            <div class="topic-card bg-white p-6 rounded-xl shadow-sm border-l-4 border-green-500">
+                <div class="text-green-500 mb-4"><i class="fas fa-tractor text-3xl"></i></div>
+                <h3 class="text-xl font-bold mb-2">Agricultural geography</h3>
+                <p class="text-gray-600">農業地理與糧食問題：全球糧食安全、農業系統與挑戰。</p>
+            </div>
+
+            <!-- 主題 7 -->
+            <div class="topic-card bg-white p-6 rounded-xl shadow-sm border-l-4 border-blue-500">
+                <div class="text-blue-500 mb-4"><i class="fas fa-users text-3xl"></i></div>
+                <h3 class="text-xl font-bold mb-2">Population change</h3>
+                <p class="text-gray-600">人口與人口變遷：人口結構、遷移與都市化趨勢。</p>
+            </div>
+
+            <!-- 主題 8 -->
+            <div class="topic-card bg-white p-6 rounded-xl shadow-sm border-l-4 border-blue-500">
+                <div class="text-blue-500 mb-4"><i class="fas fa-chart-line text-3xl"></i></div>
+                <h3 class="text-xl font-bold mb-2">Economic geography</h3>
+                <p class="text-gray-600">經濟地理與全球化：全球貿易、產業鏈與空間組織。</p>
+            </div>
+
+            <!-- 主題 9 -->
+            <div class="topic-card bg-white p-6 rounded-xl shadow-sm border-l-4 border-green-500">
+                <div class="text-green-500 mb-4"><i class="fas fa-balance-scale text-3xl"></i></div>
+                <h3 class="text-xl font-bold mb-2">Development geography</h3>
+                <p class="text-gray-600">發展地理與空間不平等：貧富差距與區域發展差異。</p>
+            </div>
+
+            <!-- 主題 10 -->
+            <div class="topic-card bg-white p-6 rounded-xl shadow-sm border-l-4 border-blue-500">
+                <div class="text-blue-500 mb-4"><i class="fas fa-city text-3xl"></i></div>
+                <h3 class="text-xl font-bold mb-2">Urban geography</h3>
+                <p class="text-gray-600">都市地理、更新與規劃：城市系統與未來都市挑戰。</p>
+            </div>
+
+            <!-- 主題 11 -->
+            <div class="topic-card bg-white p-6 rounded-xl shadow-sm border-l-4 border-blue-500">
+                <div class="text-blue-500 mb-4"><i class="fas fa-bed text-3xl"></i></div>
+                <h3 class="text-xl font-bold mb-2">Tourism management</h3>
+                <p class="text-gray-600">觀光與觀光管理：旅遊業對地理環境與經濟的影響。</p>
+            </div>
+
+            <!-- 主題 12 -->
+            <div class="topic-card bg-white p-6 rounded-xl shadow-sm border-l-4 border-green-500">
+                <div class="text-green-500 mb-4"><i class="fas fa-globe-asia text-3xl"></i></div>
+                <h3 class="text-xl font-bold mb-2">Cultural geography</h3>
+                <p class="text-gray-600">文化地理與區域認同：文化景觀、語言、宗教與認同。</p>
+            </div>
+
         </div>
-
-        <!-- 最新消息 -->
-        <section class="mt-24">
-            <div class="bg-blue-900 rounded-3xl p-10 md:p-16 text-white relative overflow-hidden">
-                <div class="relative z-10">
-                    <h2 class="text-3xl font-bold mb-6">最新教學公告</h2>
-                    <div class="space-y-4">
-                        <div class="flex items-start space-x-4 border-b border-blue-800 pb-4">
-                            <span class="bg-blue-700 px-3 py-1 rounded text-sm">2025/02/02</span>
-                            <p class="text-blue-100">地理教學網站正式上線！歡迎各位老師與同學交流。</p>
-                        </div>
-                        <div class="flex items-start space-x-4">
-                            <span class="bg-blue-700 px-3 py-1 rounded text-sm">2025/02/01</span>
-                            <p class="text-blue-100">新增「全球氣候變遷」專題討論區。</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- 裝飾用圓圈 -->
-                <div class="absolute -right-20 -bottom-20 w-64 h-64 bg-blue-800 rounded-full opacity-50"></div>
-            </div>
-        </section>
     </main>
 
-    <footer class="bg-gray-50 border-t border-gray-200 py-12 text-center text-gray-500">
-        <p class="mb-2">© 2025 fwindaihk-code. All rights reserved.</p>
-        <p class="text-sm">由 GitHub Pages 與 AI 協作建立</p>
+    <!-- 頁腳 -->
+    <footer class="bg-gray-800 text-gray-400 py-12 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <p class="mb-4">© 2025 iGeo 準備筆記中心 - 致力於地理教育推廣</p>
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="hover:text-white"><i class="fab fa-facebook text-2xl"></i></a>
+                <a href="#" class="hover:text-white"><i class="fab fa-instagram text-2xl"></i></a>
+                <a href="#" class="hover:text-white"><i class="fas fa-envelope text-2xl"></i></a>
+            </div>
+        </div>
     </footer>
 
 </body>
